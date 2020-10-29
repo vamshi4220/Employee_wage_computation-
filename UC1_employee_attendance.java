@@ -81,14 +81,20 @@ void Wage_condition(){
 		else System.out.println("wrong input");
 		System.out.println("total wage is:"+total_wage);
 		}
- 
+//UC8 WAGE COMPUTATION FOT MULTIPLE COMPONYS
+static int company (int company_wage_per_hr,int company_working_hr_per_day,int company_working_days) {
+       
+        int wage=company_wage_per_hr*company_working_hr_per_day*company_working_days;
+        System.out.println("employee wage is :"+wage);
+        return wage;
+    } 
 
 
 
 	public static void main(String[] args) {
              
 	        new uc1_employee_attendance().Attendance();
-                new uc1_employee_attendance().wage_condition();
+                new uc1_employee_attendance().company(20,8,25);
         }
 
 
