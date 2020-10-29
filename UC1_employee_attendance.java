@@ -1,6 +1,6 @@
-// UC1 ATTENDANCE
-public class uc1_employee_attendance {
 
+public class uc1_employee_attendance {
+//UC1 ATTENDANCE METHOD
 	void Attendance(){
 		 if(Math.random()<0.5) {
 			 System.out.println("Employee is absent");
@@ -11,16 +11,15 @@ public class uc1_employee_attendance {
 	
 	public static void main(String[] args) {
 		new uc1_employee_attendance().Attendance();
-     
+                new uc1_employee_attendance().employee_wage();
 	}
 
-}
+
 
 //UC2 EMPLOYEE WAGE
-
-public class UC2_employee_wage {
-
-	public static void main(String[] args) {
+   
+       void employee_wage()  {
+		
 		int Wage_per_hr=20;
 		int num_hr=8;
 		System.out.println("daily wage of the employee is:"+Wage_per_hr*num_hr );
@@ -28,19 +27,3 @@ public class UC2_employee_wage {
 
 }
 
-//UC3 PART TIME WAGE IS CALCULATED
-
-public class Part_Time_wage {
-
-	public static void main(String[] args) {
-		int Wage_per_hr=20;
-		int num_hr_full_time=8;
-		int num_hr_part_time=4;
-		System.out.println("daily wage of the fulltime employee is:"+Wage_per_hr*num_hr_full_time );
-		System.out.println("daily wage of the fulltime employee is:"+Wage_per_hr*num_hr_part_time );
-
-	}
-
-}
-
- 
