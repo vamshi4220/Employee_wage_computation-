@@ -31,7 +31,7 @@ public class uc1_employee_attendance {
                 switch ()
 
 	}
-void employee_wage_using_cases(){
+    void employee_wage_using_cases(){
          int Wage_per_hr=20;
          int num_hr_FULL_TIME=8;
          int num_hr_PART_TIME=4;
@@ -54,11 +54,22 @@ void employee_wage_using_cases(){
          }
 	 }
 
+//UC5 EMPLOYEE WAGE PER MONTH by taking 25 working days
+
+      void wage_per_month(){
+		
+		int Wage_per_hr=20;
+         	int num_hr_FULL_TIME=8;
+         	int num_hr_PART_TIME=4;
+		int num_of_working_days=25;
+                System.out.println("monthly wage of the full-time employee is:"+Wage_per_hr*num_hr_FULL_TIME*num_of_working_days );
+                System.out.println("monthly wage of the part-time employee is:"+Wage_per_hr*num_hr_PART_TIME*num_of_working_days );
+	}
 
 
 	public static void main(String[] args) {
                 new uc1_employee_attendance().Attendance();
-                new uc1_employee_attendance().employee_wage_using_cases();
+                new uc1_employee_attendance().wage_per_month();
         }
 
 
