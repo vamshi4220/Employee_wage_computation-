@@ -7,14 +7,6 @@ public class uc1_employee_attendance {
 		 }
 		 else System.out.println("Employee is present");
 	}
-	
-	
-	public static void main(String[] args) {
-		new uc1_employee_attendance().Attendance();
-                new uc1_employee_attendance().employee_wage();
-	}
-
-
 
 //UC2 EMPLOYEE WAGE
    
@@ -24,6 +16,12 @@ public class uc1_employee_attendance {
 		int num_hr=8;
 		System.out.println("daily wage of the employee is:"+Wage_per_hr*num_hr );
 	}
+
+	public static void main(String[] args) {
+                new uc1_employee_attendance().Attendance();
+                new uc1_employee_attendance().employee_wage();
+        }
+
 
 }
 
