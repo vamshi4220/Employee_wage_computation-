@@ -4,6 +4,9 @@ public class uc1_employee_attendance {
 
 //scanner obj is used in two methods
 Scanner obj=new Scanner(System.in);
+int Wage_per_hr=20;
+int num_hr_FULL_TIME=8;
+int num_hr_PART_TIME=4;
 
 
 //UC1 ATTENDANCE METHOD
@@ -19,9 +22,6 @@ Scanner obj=new Scanner(System.in);
 
        void employee_wage()  {
 
-		int Wage_per_hr=20;
-		int num_hr_FULL_TIME=8;
-                int num_hr_PART_TIME=4;
 		System.out.println("daily wage of the employee is:"+Wage_per_hr*num_hr_FULL_TIME );
                 System.out.println("daily wage of the employee is:"+Wage_per_hr*num_hr_PART_TIME );
 	}
@@ -30,9 +30,6 @@ Scanner obj=new Scanner(System.in);
 
 
     void employee_wage_using_cases(){
-         int Wage_per_hr=20;
-         int num_hr_FULL_TIME=8;
-         int num_hr_PART_TIME=4;
          System.out.println("enter 1 for employee full-time or 2 for part-time 3 if employee is absent:");
          int choice=obj.nextInt();
          switch (choice) {
@@ -54,19 +51,12 @@ Scanner obj=new Scanner(System.in);
 //UC5 EMPLOYEE WAGE PER MONTH by taking 25 working days
 
       void wage_per_month(){
-		
-		int Wage_per_hr=20;
-         	int num_hr_FULL_TIME=8;
-         	int num_hr_PART_TIME=4;
 		int num_of_working_days=25;
                 System.out.println("monthly wage of the full-time employee is:"+Wage_per_hr*num_hr_FULL_TIME*num_of_working_days );
                 System.out.println("monthly wage of the part-time employee is:"+Wage_per_hr*num_hr_PART_TIME*num_of_working_days );
 	}
 
 void Wage_condition(){
-		 int Wage_per_hr=20;
-         int num_hr_FULL_TIME=8;
-         int num_hr_PART_TIME=4;
 		 int hr_count=0;
 		 int day_count=0;
 		 int total_wage=0;
