@@ -1,6 +1,11 @@
 import java.util.Scanner;
 
 public class uc1_employee_attendance {
+
+//scanner obj is used in two methods
+Scanner obj=new Scanner(System.in);
+
+
 //UC1 ATTENDANCE METHOD
 	void Attendance(){
 		 if(Math.random()<0.5) {
@@ -23,20 +28,12 @@ public class uc1_employee_attendance {
 
 //UC4 EMPLOYEE WAGE USING SWITCH CASES
 
-       void employee_wage_using_cases(){
-                int Wage_per_hr=20;
-                int num_hr_FULL_TIME=8;
-                int num_hr_PART_TIME=4;
-                
-                switch ()
 
-	}
     void employee_wage_using_cases(){
          int Wage_per_hr=20;
          int num_hr_FULL_TIME=8;
          int num_hr_PART_TIME=4;
          System.out.println("enter 1 for employee full-time or 2 for part-time 3 if employee is absent:");
-         Scanner obj=new Scanner(System.in);
          int choice=obj.nextInt();
          switch (choice) {
          case 1:
@@ -66,10 +63,42 @@ public class uc1_employee_attendance {
                 System.out.println("monthly wage of the part-time employee is:"+Wage_per_hr*num_hr_PART_TIME*num_of_working_days );
 	}
 
+void Wage_condition(){
+		 int Wage_per_hr=20;
+         int num_hr_FULL_TIME=8;
+         int num_hr_PART_TIME=4;
+		 int hr_count=0;
+		 int day_count=0;
+		 int total_wage=0;
+		 System.out.println("enter 1 for full-time or 2 for part-time:");
+		   int choice=obj.nextInt();
+		if(choice == 1) {   
+	    
+		    while( hr_count < 200  && day_count < 20 ) {
+		    total_wage+=num_hr_FULL_TIME*Wage_per_hr;
+		    hr_count+=8;
+		    day_count++;
+		    }	
+
+	     } 
+		else if(choice == 2) {
+			while( hr_count < 200  && day_count <20 ) {
+				total_wage+=num_hr_PART_TIME*Wage_per_hr;
+			    hr_count+=4;
+			    day_count++;
+			 }	
+		}
+		else System.out.println("wrong input");
+		System.out.println("total wage is:"+total_wage);
+		}
+ 
+
+
 
 	public static void main(String[] args) {
-                new uc1_employee_attendance().Attendance();
-                new uc1_employee_attendance().wage_per_month();
+             
+	        new uc1_employee_attendance().Attendance();
+                new uc1_employee_attendance().wage_condition();
         }
 
 
