@@ -82,11 +82,11 @@ void Wage_condition(){
 		System.out.println("total wage is:"+total_wage);
 		}
 //UC8 WAGE COMPUTATION FOT MULTIPLE COMPONYS
-static int company (int company_wage_per_hr,int company_working_hr_per_day,int company_working_days) {
+ void company (String company_name,int company_wage_per_hr,int company_working_hr_per_day,int company_working_days) {
        
         int wage=company_wage_per_hr*company_working_hr_per_day*company_working_days;
-        System.out.println("employee wage is :"+wage);
-        return wage;
+        System.out.println("for company:"+company_name+"employee wage is :"+wage);
+        
     } 
 
 
