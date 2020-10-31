@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class uc1_employee_attendance {
+public class Employee_Wage extends Company{
 
 //scanner obj is used in two methods
 Scanner obj=new Scanner(System.in);
@@ -80,23 +80,32 @@ void Wage_condition(){
 		}
 		else System.out.println("wrong input");
 		System.out.println("total wage is:"+total_wage);
-		}
-//UC8 WAGE COMPUTATION FOT MULTIPLE COMPONYS
- void company (String company_name,int company_wage_per_hr,int company_working_hr_per_day,int company_working_days) {
-       
-        int wage=company_wage_per_hr*company_working_hr_per_day*company_working_days;
-        System.out.println("for company:"+company_name+"employee wage is :"+wage);
-        
-    } 
+		} 
 
 
 
 	public static void main(String[] args) {
              
-	        new uc1_employee_attendance().Attendance();
-                new uc1_employee_attendance().company(20,8,25);
+	        new employee_wage().Attendance();
+                new employee_wage().company("BigBazar",8,25);
         }
 
 
 }
 
+public class Company {
+
+	 String name_of_company;
+
+	 public void corporation(String name_of_company,int working_hrs,int salary_per_hr) {
+		this.name_of_company=name_of_company;
+		System.out.println("company name:"+name_of_company);
+		new Company().wage(working_hrs,salary_per_hr);
+        }
+       
+        public void wage(int salary_per_hr,int working_hrs) {
+	 this.salary_per_hr=salary_per_hr;
+	 this.working_hrs=working_hrs;
+	 System.out.println("employee wage is:"+salary_per_hr*working_hrs);
+ 	}
+}
